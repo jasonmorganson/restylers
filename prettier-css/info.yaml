@@ -1,0 +1,28 @@
+---
+overrides: prettier
+name: prettier-css
+include:
+  - "**/*.css"
+  - "**/*.less"
+  - "**/*.scss"
+documentation:
+  - https://prettier.io/docs/en/
+  - https://prettier.io/blog/2018/07/29/1.14.0.html
+metadata:
+  languages:
+    - CSS
+    - LESS
+    - SCSS
+  tests:
+    - extension: css
+      contents: |
+        a[id=test] {}
+        a[id="test"] {}
+        a[id='test'] {}
+      restyled: |
+        a[id='test'] {
+        }
+        a[id='test'] {
+        }
+        a[id='test'] {
+        }
